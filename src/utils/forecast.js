@@ -1,8 +1,9 @@
 var request = require("request")
+var keys = require("../../keys.js")
 
 var forecast = (lat, lon, callback) => {
 
-    var url = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=4b1cef10e2d4cc4ad490a6d3b8f26413"
+    var url = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=" + keys.weatherKey
 
         request({url, json: true}, (error, {body} = {}) => {
             if(error) {
