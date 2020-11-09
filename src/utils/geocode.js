@@ -3,7 +3,7 @@ var keys = require("../../keys.js")
 
 var geocode = (address, callback) => {
 
-    var url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(address) + ".json?access_token=" + keys.geocodeKey
+    var url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(address) + ".json?access_token=" + process.env.geocodeKey
     
     request({url, json: true}, (error, {body} = {}) => {
         if(error){
