@@ -2,7 +2,6 @@ var path = require("path")
 var express = require("express")
 var app = express()
 var hbs = require("hbs")
-var request = require("request")
 var geocode = require("./utils/geocode")
 var forecast = require("./utils/forecast")
 
