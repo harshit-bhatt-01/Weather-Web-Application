@@ -1,5 +1,4 @@
 var request = require("request")
-var keys = require("../../keys.js")
 
 var geocode = (address, callback) => {
 
